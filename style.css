@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&family=Sofia+Sans+Semi+Condensed:wght@800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+#cv {
+  color-scheme: dark light;
+  margin: 0 auto;
+  padding-block: 2vi;
+  width: 100%;
+  background: radial-gradient(
+    circle at calc(2vi + 150px) calc(-200vi - 3000px),
+    lightseagreen clamp(calc(204vi + 3400px), calc(74vi / 3 + 204vi + 3000px), calc(230vi + 3000px)),
+    graytext clamp(calc(204vi + 3403px), calc(74vi / 3 + 204vi + 3003px), calc(230vi + 3000px)),
+    field clamp(calc(204.75vi + 3403px), calc(74vi / 3 + 204.75vi + 3003px), calc(230vi + 3000px))
+  );
+  font: clamp(1.125rem, calc((100vi - 700px) * 0.0075 + 1.125rem), 1.75rem) / 1.175 serif;
+  color: fieldtext;
+  container-type: inline-size;
+  & h2,
+  & h3,
+  & h4 {
+    margin: 0;
+  }
+  & h2 {
+    font-family: "Sansita Swashed", sans-serif;
+    position: absolute;
+    font-size: 2.5em;
+    width: 300px;
+    text-align: center;
+    color: yellow;
+    text-shadow: 0 0 0.3vi black;
+    top: calc(400px - 1.75lh);
+    left: calc((98vi - 300px) / 2);
+  }
+  & h3,
+  & h4 {
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+  }
+  & h3 {
+    font-size: 2.15em;
+  }
+  & h4 {
+    font-size: 1.8em;
+  }
+  & .icons,
+  & .content .works,
+  & figcaption > div,
+  & .conticons,
+  & .btm,
+  & .contact p {
+    display: flex;
+    gap: 1.25em;
+  }
+  & .pic {
+    display: block;
+    overflow: hidden;
+    background-color: darkseagreen;
+  }
+  & .icons {
+    justify-content: center;
+    line-height: 0.5;
+    & img {
+      width: 2em;
+    }
+  }
+  & .top {
+    display: flow-root;
+    & h4 {
+      text-align: center;
+    }
+    & .pic {
+      height: 400px;
+      width: 300px;
+      margin: 0 auto;
+      & img {
+        object-position: -170px 0px;
+      }
+    }
+    & .info {
+      margin-block: 2.5lh 0;
+      padding: 2vi;
+      background-color: field;
+    }
+  }
+  & .content {
+    margin-block: 2em;
+    & .works {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-block-start: 1em;
+      gap: calc(1.5vi + 10px);
+    }
+    & h3 {
+      padding-inline: 2vi;
+    }
+    & figure {
+      flex-basis: 600px;
+      margin: unset;
+      box-shadow: calc(0.1vi + 2px) calc(0.1vi + 2px) calc(0.8vi + 5px) fieldtext;
+      & .screen {
+        object-fit: cover;
+        width: 100%;
+      }
+      & figcaption {
+        padding-inline: 2vi;
+        min-height: 7lh;
+        background-color: field;
+        & > div {
+          justify-content: space-between;
+          margin-block: 1em 0;
+          line-height: 1;
+          & .conticons {
+            & img {
+              width: 1.5em;
+            }
+            & .open {
+              width: 1.25em;
+            }
+          }
+        }
+      }
+      & .f1 {
+        background-color: darkviolet;
+      }
+      & .f2 {
+        background-color: darkorange;
+      }
+      & .f3 {
+        background-color: darkslateblue;
+      }
+      & .f4 {
+        background-color: darkgreen;
+      }
+      & .f5 {
+        background-color: darkcyan;
+      }
+      & .f6 {
+        background-color: darkred;
+      }
+    }
+  }
+  & .btm {
+    background-color: lightseagreen;
+    padding-block: 2vi;
+    flex-wrap: wrap;
+    justify-content: center;
+    & .contact {
+      padding-inline: 2vi;
+    }
+    & p {
+      column-gap: unset;
+      align-items: center;
+    }
+    & svg {
+      display: none;
+      padding-inline-end: 1em;
+    }
+    & .pic {
+      height: 360px;
+      flex: 0 0 300px;
+      & img {
+        object-position: -100px 0px;
+      }
+    }
+  }
+}
+@container (width > 700px) {
+  #cv {
+    & .pic {
+      box-shadow: calc(0.1vi + 2px) calc(0.1vi + 2px) 1vi fieldtext;
+    }
+    & .top {
+      padding-inline: 2vi;
+      & .pic {
+        float: left;
+        margin: 0 2vi 0.125lh 0;
+      }
+      & h2 {
+        width: 94vi;
+        left: unset;
+        top: unset;
+      }
+      & .info {
+        margin-inline: 12.5vi 0;
+        margin-block: 4lh 0;
+        box-shadow: calc(0.1vi + 3px) calc(0.1vi + 3px) 1vi fieldtext;
+      }
+    }
+    & .content {
+      padding-inline: 2vi;
+      & h3 {
+        padding-inline: unset;
+      }
+      & figure {
+        flex-basis: 44vi;
+        flex-grow: 1;
+      }
+    }
+    & .icons {
+      justify-content: flex-end;
+    }
+    & .btm {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: center;
+      & svg {
+        display: block;
+        width: 2.5em;
+        fill: fieldtext;
+      }
+      padding-inline: 2vi;
+      & .contact {
+        padding-inline: unset;
+        flex-shrink: 1;
+      }
+    }
+  }
+}
+@container (width > 1200px) {
+  #cv {
+    & .top {
+      & .pic {
+        width: 600px;
+        & img {
+          object-position: unset;
+        }
+      }
+      & h2 {
+        width: 600px;
+        top: calc(400px - 0.55lh);
+      }
+      & .info {
+        margin-block: 1lh 0;
+      }
+    }
+    & .content figure {
+      flex-basis: 29vi;
+    }
+    & .btm {
+      & .pic {
+        flex: 0 0 600px;
+        & img {
+          object-position: unset;
+        }
+      }
+    }
+  }
+}
+@container (width > 1600px) {
+  #cv {
+    & .top {
+      & .pic {
+        width: 37vi;
+        height: calc(74vi / 3);
+        & img {
+          width: 100%;
+        }
+      }
+      & h2 {
+        width: 37vi;
+        top: calc(74vi / 3 - 0.55lh);
+      }
+    }
+    & .content {
+      margin-block: 3em;
+    }
+    & .btm .pic {
+      flex: 0 0 37vi;
+      height: calc(37vi * 6 / 10);
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
